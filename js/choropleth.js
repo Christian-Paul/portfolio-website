@@ -58,7 +58,7 @@ g.call(d3.axisBottom(x)
     .select(".domain")
     .remove();
 
-const EDUCATION_FILE = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/for_user_education.json';
+const EDUCATION_FILE = 'https://raw.githubusercontent.com/Christian-Paul/portfolio-website/master/education.json';
 const COUNTY_FILE = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/counties.json';
 
 d3.queue()
