@@ -1,0 +1,396 @@
+$accent: firebrick
+$error-color: red
+
+html, body
+  margin: 0
+  padding: 0
+  font-family: "Roboto", sans-serif
+  color: #fff
+
+.intro-holder
+  width: 100%
+  height: 40em
+  background-image: url('../images/lights.jpg')
+  //-webkit-filter: saturate(110%) contrast(110%)
+  box-shadow: 0px 0px 0px 800px rgba(0, 0, 0, 0.30) inset
+  background-position: center
+  background-size: cover
+
+  @media (min-width: 1024px)
+    height: 100vh
+
+  .nav-holder
+    width: 100%
+    display: flex
+    justify-content: center
+    height: 6em
+    align-items: center
+
+    .nav
+      width: 90%
+      max-width: 1200px
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: #fff solid 1px
+
+      .logo-holder
+        .logo
+          fill: #fff
+          transition: all 0.5s ease
+        
+        a:hover
+          .logo
+            fill: orange
+
+      a
+        text-decoration: none
+        color: #fff
+        transition: all 0.5s ease
+        cursor: pointer
+        @media(min-width: 600px)
+          font-size: 1.2em
+
+      a:hover
+        color: #ddd
+
+      .logo-holder, .destinations-holder, .destination, a
+        height: 100%
+        display: flex
+        align-items: center
+
+      .destinations-holder
+        div + div
+          margin-left: 0.5em
+          @media (min-width: 600px)
+            margin-left: 1em
+
+  .landing-holder
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 10em
+    @media (min-width: 1024px)
+      margin-top: 15em
+
+    .landing
+      .landing-title
+        font-family: "Open Sans", sans-serif
+        font-size: 2.4em
+        @media (min-width: 400px)
+          font-size: 3em
+        @media (min-width: 600px)
+          font-size: 4em
+        @media (min-width: 1000px)
+          font-size: 6em
+
+      .landing-subtitle
+        text-align: right
+        @media (min-width: 400px)
+          font-size: 1.2em
+        @media (min-width: 600px)
+          font-size: 1.3em
+        @media (min-width: 1000px)
+          font-size: 1.5em
+
+.about-holder
+  width: 100%
+  background-color: #111
+  display: flex
+  justify-content: center
+
+  .about
+    width: 90%
+    padding-top: 3em
+    padding-bottom: 3em
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media(min-width: 700px)
+      flex-direction: row
+      justify-content: center
+
+
+    .about-picture
+      background: url('../images/PortfolioProfileSmall.jpg')
+      background-size: cover
+      height: 12em
+      width: 12em
+      border-radius: 50%
+
+      @media(min-width: 400px) 
+        height: 14em
+        width: 14em
+      @media(min-width: 700px)
+        max-height: 20em
+        max-width: 20em
+        height: 30vw
+        width: 30vw
+
+    .about-bio-holder
+      @media(min-width: 700px)
+        padding-left: 5vw
+        max-width: 35em
+        width: 50vw
+      @media(min-width: 1100px)
+        padding-left: 3em
+      @media(min-width: 1200px)
+        padding-left: 5em
+      @media(min-width: 1200px)
+        padding-left: 6em
+      @media(min-width: 1300px)
+        padding-left: 8em
+
+      .bio-title
+        padding-top: 0.5em
+        font-size: 1.8em
+        border-bottom: 1px #888 solid
+        @media(min-width: 700px)
+          padding-top: 0
+          font-size: 2em
+        @media(min-width: 1000px)
+          font-size: 2.2em
+        @media(min-width: 1150px)
+          font-size: 2.6em
+
+      .bio-body
+        padding-top: 0.25em
+        @media(min-width: 700px)
+          font-size: 1.1em
+        @media(min-width: 1000px)
+          font-size: 1.2em
+
+      .bio-add
+        padding-top: 0.5em
+        @media(min-width: 700px)
+          font-size: 1.1em
+        @media(min-width: 1000px)
+          font-size: 1.2em
+
+.portfolio-holder
+  background-color: #222
+  width: 100%
+  display: flex
+  justify-content: center
+
+  .portfolio
+    width: 90vw
+    padding-top: 0.5em
+    padding-bottom: 3em
+
+    @media (min-width: 700px)
+      padding-top: 0em
+      padding-bottom: 4.5em
+
+    .portfolio-row
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media(min-width: 700px)
+        flex-direction: row
+        justify-content: center
+
+        .project-holder + .project-holder
+          padding-left: 5vw
+    
+      .project-holder
+        width: 90vw
+        padding-top: 3em
+        flex: 1
+        @media(min-width: 700px)
+          width: 42vw
+          padding-top: 4.5em
+
+        .glenn-sunni-preview
+          background-image: url('../images/glennsunni-preview.jpg')
+
+        .gdp-preview
+          background-image: url('../images/gdp-preview.png')
+
+        .weather-preview
+          background-image: url('../images/weather-preview.png')
+
+        .stock-preview
+          background-image: url('../images/stock-preview.png')
+
+        .search-preview
+          background-image: url('../images/search-preview.png')
+
+        .pollify-preview
+          background-image: url('../images/pollify-preview.png')
+
+        .project-preview
+          background-position: top center
+          background-size: cover
+          height: 45vw
+          width: 90vw
+          @media(min-width: 700px)
+            height: 21vw
+            width: 42vw
+
+        .project-title
+          font-size: 1.8em
+          padding-top: 0.5em
+          @media(min-width: 1000px)
+            font-size: 2.2em
+
+        .project-description
+          padding-top: 0.5em
+          @media(min-width: 1000px)
+            font-size: 1.2em
+
+      .links-holder
+        display: flex
+        justify-content: center
+        padding-top: 1em
+        padding-bottom: 1.5em
+        border-bottom: 1px solid #fff
+        @media(min-width: 700px)
+          padding-bottom: 2em 
+
+        .links
+          width: 10em
+          display: flex
+          justify-content: space-between
+
+          .codepen-svg, .github-svg, .link-svg
+            fill: #fff
+            transition: 0.35s ease all
+            height: 2em
+            width: 2em
+
+            @media(min-width: 700px)
+              height: 2.5em
+              width: 2.5em
+
+          .codepen-svg:hover, .github-svg:hover, .link-svg:hover
+            fill: $accent
+
+          .grayed-out 
+            fill: #333 !important
+            cursor: default
+
+.contact-holder
+  width: 100%
+  display: flex
+  justify-content: center
+  background-color: #111
+
+  .contact
+    width: 80%
+    padding-top: 3em
+    padding-bottom: 3em
+    max-width: 600px
+
+    .contact-title
+      font-size: 2em
+      @media (min-width: 1000px)
+        font-size: 2.2em
+
+    .contact-info
+      padding-top: 0.25em
+      @media (min-width: 1000px)
+        font-size: 1.2em
+
+    .form-holder
+      .form
+        padding-top: 1em
+
+        .form-item
+          display: flex
+          flex-direction: column
+
+          label
+            @media (min-width: 1000px)
+              font-size: 1.2em
+
+          input, textarea
+            margin-top: 0.25em
+            margin-bottom: 0.75em
+
+          input
+            height: 2em
+
+          textarea
+            resize: none
+            overflow: auto
+            height: 6em
+
+          #message-error, #subject-error, #email-error, #name-error
+            border-bottom: 1px $error-color solid
+            align-self: flex-end
+
+      .response-submit
+        display: flex
+        flex-direction: column-reverse
+        align-items: center
+
+        .response-failure, .response-success
+          display: none
+          font-size: 0.8em
+          border-bottom: 1px solid $error-color
+          margin-top: 1em
+          @media (min-width: 1300px)
+            font-size: 1em
+
+        .submit
+          margin-top: 1em
+          color: #fff
+          background-color: darkred
+          border: none
+          width: 6em
+          height: 3em
+          cursor: pointer
+          transition: all 0.5s ease
+          @media (min-width: 800px)
+            width: 8em
+            height: 3em
+            font-size: 0.85em
+
+        .submit:hover
+          background-color: firebrick
+
+.footer-holder
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #000
+  color: #aaa
+
+  .footer
+    padding-top: 1.5em
+    padding-bottom: 1.5em
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media(min-width: 650px)
+      width: 90%
+      flex-direction: row
+      justify-content: space-between
+
+    .footer-info
+      #heart
+        color: red !important
+
+    .footer-nav
+      display: flex
+      padding-top: 1em
+      @media(min-width: 650px)
+        padding-top: 0
+
+      .footer-dest + .footer-dest
+        padding-left: 0.25em
+        @media(min-width: 650px)
+          padding-left: 1em
+
+      .footer-dest
+        a
+          text-decoration: none
+          transition: all 0.1s ease
+          color: #aaa
+          cursor: pointer
+
+        a:hover
+          color: lightblue

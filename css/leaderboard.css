@@ -1,0 +1,56 @@
+html, body {
+  background-color: #749C67;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto"; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .container #users {
+    padding-bottom: 3em; }
+  .container .title {
+    font-size: 3em;
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: "Droid Serif"; }
+    .container .title .fcc-logo {
+      height: 1.5em;
+      width: 1.5em; }
+  .container .holder {
+    display: flex;
+    align-items: center;
+    padding-top: 3em; }
+    .container .holder .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 10em; }
+      .container .holder .column span {
+        width: 100%;
+        text-align: center;
+        border: 1px solid #111;
+        background-color: #fff;
+        padding-top: 0.1em;
+        padding-bottom: 0.2em; }
+      .container .holder .column span:nth-child(odd) {
+        background-color: #ddd; }
+      .container .holder .column .column-title {
+        font-size: 2em;
+        border: 1px solid #111;
+        width: 100%;
+        text-align: center;
+        background-color: #553011;
+        color: white;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em; }
+      .container .holder .column .column-2-title, .container .holder .column .column-3-title {
+        cursor: pointer; }
+    .container .holder .column-4 {
+      width: 15em; }
+
+/*# sourceMappingURL=leaderboard.css.map */

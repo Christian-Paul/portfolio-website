@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  color: #fff; }
+  html .overlay, body .overlay {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5); }
+    html .overlay .message-holder, body .overlay .message-holder {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      html .overlay .message-holder .message, body .overlay .message-holder .message {
+        font-size: 7em; }
+@media(min-width: 500px) {
+  html .overlay .message-holder .message, body .overlay .message-holder .message {
+    font-size: 10em; } }
+@media(min-width: 800px) {
+  html .overlay .message-holder .message, body .overlay .message-holder .message {
+    font-size: 14em; } }
+      html .overlay .message-holder a, body .overlay .message-holder a {
+        padding: 0.5em;
+        background-color: darkred;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
+        transition: ease 1s; }
+@media(min-width: 800px) {
+  html .overlay .message-holder a, body .overlay .message-holder a {
+    padding: 0.65em;
+    font-size: 1.1em; } }
+      html .overlay .message-holder a:hover, body .overlay .message-holder a:hover {
+        background-color: #990000;
+        box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.5); }
+
+html {
+  background: url("../images/404.jpg");
+  background-size: cover; }
+
+/*# sourceMappingURL=error.css.map */

@@ -1,0 +1,365 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #fff; }
+
+.intro-holder {
+  width: 100%;
+  height: 40em;
+  background-image: url("../images/lights.jpg");
+  box-shadow: 0px 0px 0px 800px rgba(0, 0, 0, 0.3) inset;
+  background-position: center;
+  background-size: cover; }
+  @media (min-width: 1024px) {
+    .intro-holder {
+      height: 100vh; } }
+  .intro-holder .nav-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 6em;
+    align-items: center; }
+    .intro-holder .nav-holder .nav {
+      width: 90%;
+      max-width: 1200px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: #fff solid 1px; }
+      .intro-holder .nav-holder .nav .logo-holder .logo {
+        fill: #fff;
+        transition: all 0.5s ease; }
+      .intro-holder .nav-holder .nav .logo-holder a:hover .logo {
+        fill: orange; }
+      .intro-holder .nav-holder .nav a {
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.5s ease;
+        cursor: pointer; }
+@media(min-width: 600px) {
+  .intro-holder .nav-holder .nav a {
+    font-size: 1.2em; } }
+      .intro-holder .nav-holder .nav a:hover {
+        color: #ddd; }
+      .intro-holder .nav-holder .nav .logo-holder, .intro-holder .nav-holder .nav .destinations-holder, .intro-holder .nav-holder .nav .destination, .intro-holder .nav-holder .nav a {
+        height: 100%;
+        display: flex;
+        align-items: center; }
+      .intro-holder .nav-holder .nav .destinations-holder div + div {
+        margin-left: 0.5em; }
+        @media (min-width: 600px) {
+          .intro-holder .nav-holder .nav .destinations-holder div + div {
+            margin-left: 1em; } }
+  .intro-holder .landing-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em; }
+    @media (min-width: 1024px) {
+      .intro-holder .landing-holder {
+        margin-top: 15em; } }
+    .intro-holder .landing-holder .landing .landing-title {
+      font-family: "Open Sans", sans-serif;
+      font-size: 2.4em; }
+      @media (min-width: 400px) {
+        .intro-holder .landing-holder .landing .landing-title {
+          font-size: 3em; } }
+      @media (min-width: 600px) {
+        .intro-holder .landing-holder .landing .landing-title {
+          font-size: 4em; } }
+      @media (min-width: 1000px) {
+        .intro-holder .landing-holder .landing .landing-title {
+          font-size: 6em; } }
+    .intro-holder .landing-holder .landing .landing-subtitle {
+      text-align: right; }
+      @media (min-width: 400px) {
+        .intro-holder .landing-holder .landing .landing-subtitle {
+          font-size: 1.2em; } }
+      @media (min-width: 600px) {
+        .intro-holder .landing-holder .landing .landing-subtitle {
+          font-size: 1.3em; } }
+      @media (min-width: 1000px) {
+        .intro-holder .landing-holder .landing .landing-subtitle {
+          font-size: 1.5em; } }
+
+.about-holder {
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: center; }
+  .about-holder .about {
+    width: 90%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+@media(min-width: 700px) {
+  .about-holder .about {
+    flex-direction: row;
+    justify-content: center; } }
+    .about-holder .about .about-picture {
+      background: url("../images/PortfolioProfileSmall.jpg");
+      background-size: cover;
+      height: 12em;
+      width: 12em;
+      border-radius: 50%; }
+@media(min-width: 400px) {
+  .about-holder .about .about-picture {
+    height: 14em;
+    width: 14em; } }
+@media(min-width: 700px) {
+  .about-holder .about .about-picture {
+    max-height: 20em;
+    max-width: 20em;
+    height: 30vw;
+    width: 30vw; } }
+@media(min-width: 700px) {
+  .about-holder .about .about-bio-holder {
+    padding-left: 5vw;
+    max-width: 35em;
+    width: 50vw; } }
+@media(min-width: 1100px) {
+  .about-holder .about .about-bio-holder {
+    padding-left: 3em; } }
+@media(min-width: 1200px) {
+  .about-holder .about .about-bio-holder {
+    padding-left: 5em; } }
+@media(min-width: 1200px) {
+  .about-holder .about .about-bio-holder {
+    padding-left: 6em; } }
+@media(min-width: 1300px) {
+  .about-holder .about .about-bio-holder {
+    padding-left: 8em; } }
+    .about-holder .about .about-bio-holder .bio-title {
+      padding-top: 0.5em;
+      font-size: 1.8em;
+      border-bottom: 1px #888 solid; }
+@media(min-width: 700px) {
+  .about-holder .about .about-bio-holder .bio-title {
+    padding-top: 0;
+    font-size: 2em; } }
+@media(min-width: 1000px) {
+  .about-holder .about .about-bio-holder .bio-title {
+    font-size: 2.2em; } }
+@media(min-width: 1150px) {
+  .about-holder .about .about-bio-holder .bio-title {
+    font-size: 2.6em; } }
+    .about-holder .about .about-bio-holder .bio-body {
+      padding-top: 0.25em; }
+@media(min-width: 700px) {
+  .about-holder .about .about-bio-holder .bio-body {
+    font-size: 1.1em; } }
+@media(min-width: 1000px) {
+  .about-holder .about .about-bio-holder .bio-body {
+    font-size: 1.2em; } }
+    .about-holder .about .about-bio-holder .bio-add {
+      padding-top: 0.5em; }
+@media(min-width: 700px) {
+  .about-holder .about .about-bio-holder .bio-add {
+    font-size: 1.1em; } }
+@media(min-width: 1000px) {
+  .about-holder .about .about-bio-holder .bio-add {
+    font-size: 1.2em; } }
+.portfolio-holder {
+  background-color: #222;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .portfolio-holder .portfolio {
+    width: 90vw;
+    padding-top: 0.5em;
+    padding-bottom: 3em; }
+    @media (min-width: 700px) {
+      .portfolio-holder .portfolio {
+        padding-top: 0em;
+        padding-bottom: 4.5em; } }
+    .portfolio-holder .portfolio .portfolio-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+@media(min-width: 700px) {
+  .portfolio-holder .portfolio .portfolio-row {
+    flex-direction: row;
+    justify-content: center; }
+    .portfolio-holder .portfolio .portfolio-row .project-holder + .project-holder {
+      padding-left: 5vw; } }
+      .portfolio-holder .portfolio .portfolio-row .project-holder {
+        width: 90vw;
+        padding-top: 3em;
+        flex: 1; }
+@media(min-width: 700px) {
+  .portfolio-holder .portfolio .portfolio-row .project-holder {
+    width: 42vw;
+    padding-top: 4.5em; } }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .glenn-sunni-preview {
+          background-image: url("../images/glennsunni-preview.jpg"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .gdp-preview {
+          background-image: url("../images/gdp-preview.png"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .weather-preview {
+          background-image: url("../images/weather-preview.png"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .stock-preview {
+          background-image: url("../images/stock-preview.png"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .search-preview {
+          background-image: url("../images/search-preview.png"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .pollify-preview {
+          background-image: url("../images/pollify-preview.png"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .project-preview {
+          background-position: top center;
+          background-size: cover;
+          height: 45vw;
+          width: 90vw; }
+@media(min-width: 700px) {
+  .portfolio-holder .portfolio .portfolio-row .project-holder .project-preview {
+    height: 21vw;
+    width: 42vw; } }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .project-title {
+          font-size: 1.8em;
+          padding-top: 0.5em; }
+@media(min-width: 1000px) {
+  .portfolio-holder .portfolio .portfolio-row .project-holder .project-title {
+    font-size: 2.2em; } }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .project-description {
+          padding-top: 0.5em; }
+@media(min-width: 1000px) {
+  .portfolio-holder .portfolio .portfolio-row .project-holder .project-description {
+    font-size: 1.2em; } }
+      .portfolio-holder .portfolio .portfolio-row .links-holder {
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid #fff; }
+@media(min-width: 700px) {
+  .portfolio-holder .portfolio .portfolio-row .links-holder {
+    padding-bottom: 2em; } }
+        .portfolio-holder .portfolio .portfolio-row .links-holder .links {
+          width: 10em;
+          display: flex;
+          justify-content: space-between; }
+          .portfolio-holder .portfolio .portfolio-row .links-holder .links .codepen-svg, .portfolio-holder .portfolio .portfolio-row .links-holder .links .github-svg, .portfolio-holder .portfolio .portfolio-row .links-holder .links .link-svg {
+            fill: #fff;
+            transition: 0.35s ease all;
+            height: 2em;
+            width: 2em; }
+@media(min-width: 700px) {
+  .portfolio-holder .portfolio .portfolio-row .links-holder .links .codepen-svg, .portfolio-holder .portfolio .portfolio-row .links-holder .links .github-svg, .portfolio-holder .portfolio .portfolio-row .links-holder .links .link-svg {
+    height: 2.5em;
+    width: 2.5em; } }
+          .portfolio-holder .portfolio .portfolio-row .links-holder .links .codepen-svg:hover, .portfolio-holder .portfolio .portfolio-row .links-holder .links .github-svg:hover, .portfolio-holder .portfolio .portfolio-row .links-holder .links .link-svg:hover {
+            fill: firebrick; }
+          .portfolio-holder .portfolio .portfolio-row .links-holder .links .grayed-out {
+            fill: #333 !important;
+            cursor: default; }
+
+.contact-holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #111; }
+  .contact-holder .contact {
+    width: 80%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    max-width: 600px; }
+    .contact-holder .contact .contact-title {
+      font-size: 2em; }
+      @media (min-width: 1000px) {
+        .contact-holder .contact .contact-title {
+          font-size: 2.2em; } }
+    .contact-holder .contact .contact-info {
+      padding-top: 0.25em; }
+      @media (min-width: 1000px) {
+        .contact-holder .contact .contact-info {
+          font-size: 1.2em; } }
+    .contact-holder .contact .form-holder .form {
+      padding-top: 1em; }
+      .contact-holder .contact .form-holder .form .form-item {
+        display: flex;
+        flex-direction: column; }
+        @media (min-width: 1000px) {
+          .contact-holder .contact .form-holder .form .form-item label {
+            font-size: 1.2em; } }
+        .contact-holder .contact .form-holder .form .form-item input, .contact-holder .contact .form-holder .form .form-item textarea {
+          margin-top: 0.25em;
+          margin-bottom: 0.75em; }
+        .contact-holder .contact .form-holder .form .form-item input {
+          height: 2em; }
+        .contact-holder .contact .form-holder .form .form-item textarea {
+          resize: none;
+          overflow: auto;
+          height: 6em; }
+        .contact-holder .contact .form-holder .form .form-item #message-error, .contact-holder .contact .form-holder .form .form-item #subject-error, .contact-holder .contact .form-holder .form .form-item #email-error, .contact-holder .contact .form-holder .form .form-item #name-error {
+          border-bottom: 1px red solid;
+          align-self: flex-end; }
+    .contact-holder .contact .form-holder .response-submit {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center; }
+      .contact-holder .contact .form-holder .response-submit .response-failure, .contact-holder .contact .form-holder .response-submit .response-success {
+        display: none;
+        font-size: 0.8em;
+        border-bottom: 1px solid red;
+        margin-top: 1em; }
+        @media (min-width: 1300px) {
+          .contact-holder .contact .form-holder .response-submit .response-failure, .contact-holder .contact .form-holder .response-submit .response-success {
+            font-size: 1em; } }
+      .contact-holder .contact .form-holder .response-submit .submit {
+        margin-top: 1em;
+        color: #fff;
+        background-color: darkred;
+        border: none;
+        width: 6em;
+        height: 3em;
+        cursor: pointer;
+        transition: all 0.5s ease; }
+        @media (min-width: 800px) {
+          .contact-holder .contact .form-holder .response-submit .submit {
+            width: 8em;
+            height: 3em;
+            font-size: 0.85em; } }
+      .contact-holder .contact .form-holder .response-submit .submit:hover {
+        background-color: firebrick; }
+
+.footer-holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #aaa; }
+  .footer-holder .footer {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+@media(min-width: 650px) {
+  .footer-holder .footer {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between; } }
+    .footer-holder .footer .footer-info #heart {
+      color: red !important; }
+    .footer-holder .footer .footer-nav {
+      display: flex;
+      padding-top: 1em; }
+@media(min-width: 650px) {
+  .footer-holder .footer .footer-nav {
+    padding-top: 0; } }
+      .footer-holder .footer .footer-nav .footer-dest + .footer-dest {
+        padding-left: 0.25em; }
+@media(min-width: 650px) {
+  .footer-holder .footer .footer-nav .footer-dest + .footer-dest {
+    padding-left: 1em; } }
+      .footer-holder .footer .footer-nav .footer-dest a {
+        text-decoration: none;
+        transition: all 0.1s ease;
+        color: #aaa;
+        cursor: pointer; }
+      .footer-holder .footer .footer-nav .footer-dest a:hover {
+        color: lightblue; }
+
+/*# sourceMappingURL=index.css.map */

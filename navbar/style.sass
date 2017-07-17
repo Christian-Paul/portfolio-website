@@ -1,0 +1,79 @@
+html, body 
+  margin: 0
+  padding: 0
+  color: white
+  font-family: 'Lato'
+
+.navbar-container 
+  background-color: #111
+
+  .navbar 
+    display: flex
+    justify-content: space-between
+    
+    @media (max-width: 850px)
+      flex-direction: column
+
+    .logo-holder
+      display: flex
+      align-items: center
+
+      .logo-img 
+        background-image: url('logotrans.png')
+        background-size: cover
+        width: 70px
+        height: 70px
+
+    #bun
+      display: none
+
+      @media (max-width: 850px)
+        position: fixed
+        top: 20px
+        right: 16px
+        height: 20px
+        display: flex
+        align-self: center
+
+        #hamburger
+          display: block
+          height: 2px
+          position: relative
+          transition: background .2s ease-out
+          width: 18px
+          background-color: #aaa
+          top: 10px
+
+        #hamburger:before, #hamburger:after 
+          background: #aaa
+          content: ''
+          display: block
+          height: 100%
+          position: absolute
+          transition: all .2s ease-out
+          width: 100%
+
+        #hamburger:before 
+          top: 5px
+
+        #hamburger:after 
+          top: -5px
+
+        #hamburger.clicked 
+          background: transparent
+
+        #hamburger.clicked:before 
+          transform: rotate(45deg)
+
+        #hamburger.clicked:after 
+          transform: rotate(-45deg)
+
+        #hamburger.clicked:before, #hamburger.clicked:after
+          top: 0
+
+    .places
+      display: flex
+      align-items: center
+
+      @media (max-width: 850px) 
+        display: none

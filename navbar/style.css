@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Lato"; }
+
+.navbar-container {
+  background-color: #111; }
+  .navbar-container .navbar {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 850px) {
+      .navbar-container .navbar {
+        flex-direction: column; } }
+    .navbar-container .navbar .logo-holder {
+      display: flex;
+      align-items: center; }
+      .navbar-container .navbar .logo-holder .logo-img {
+        background-image: url("logotrans.png");
+        background-size: cover;
+        width: 70px;
+        height: 70px; }
+    .navbar-container .navbar #bun {
+      display: none; }
+      @media (max-width: 850px) {
+        .navbar-container .navbar #bun {
+          position: fixed;
+          top: 20px;
+          right: 16px;
+          height: 20px;
+          display: flex;
+          align-self: center; }
+          .navbar-container .navbar #bun #hamburger {
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background 0.2s ease-out;
+            width: 18px;
+            background-color: #aaa;
+            top: 10px; }
+          .navbar-container .navbar #bun #hamburger:before, .navbar-container .navbar #bun #hamburger:after {
+            background: #aaa;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all 0.2s ease-out;
+            width: 100%; }
+          .navbar-container .navbar #bun #hamburger:before {
+            top: 5px; }
+          .navbar-container .navbar #bun #hamburger:after {
+            top: -5px; }
+          .navbar-container .navbar #bun #hamburger.clicked {
+            background: transparent; }
+          .navbar-container .navbar #bun #hamburger.clicked:before {
+            transform: rotate(45deg); }
+          .navbar-container .navbar #bun #hamburger.clicked:after {
+            transform: rotate(-45deg); }
+          .navbar-container .navbar #bun #hamburger.clicked:before, .navbar-container .navbar #bun #hamburger.clicked:after {
+            top: 0; } }
+    .navbar-container .navbar .places {
+      display: flex;
+      align-items: center; }
+      @media (max-width: 850px) {
+        .navbar-container .navbar .places {
+          display: none; } }
+
+/*# sourceMappingURL=style.css.map */

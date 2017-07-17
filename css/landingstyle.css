@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans";
+  background-color: #111;
+}
+
+
+/*header*/
+.header-bg {
+  background-color: #222;
+}
+
+.header {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-parent {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.nav-parent a {
+  text-decoration: none;
+  color: white;
+  padding: .8em 1em;
+  display: block;
+  font-size: 1.4em;
+  font-weight: 80;
+}
+
+#logo {
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  padding: 1em;
+  font-size: 1.1em;
+  font-family: "Indie Flower";
+  display: flex;
+  align-items: center;
+}
+
+.nav-button:hover {
+  background-color: #333;
+}
+
+
+@media screen and (max-width:1000px) {
+  .nav-parent a {
+    font-size: 1em;
+  }
+
+  #logo {
+    font-size: .6em;
+  }
+}
+
+@media screen and (max-width:550px) {
+  #logo {
+    font-size: .4em;
+    text-align: center;
+  }
+
+  .header {
+    width: 90%;
+  }
+}
+
+/*for iphone*/
+@media screen and (max-width:400px) {
+  .nav-parent a {
+    padding: .8em .8em;
+  }
+
+  #logo {
+    font-size: .4em;
+    text-align: center;
+  }
+
+  .header {
+    width: 100%;
+  }
+}
+
+/*jumbotron*/
+.jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=3f9c78df0edb464244bbabb04d1797d8");
+  background-size: cover;
+  height: 60em;
+  background-position: 50% 90%;
+  margin-bottom: 0px;
+  color: black;
+  text-align: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.jumbotron h1 {
+  margin-top: 2.6em;
+  text-shadow: rgba(255,255,255,.5) 2px 2px 6px; 
+  color: black;
+  font-size: 5.4em;
+  font-family: "Montserrat";
+}
+
+.jumbotron p {
+  font-size: 2.2em;
+  text-shadow: rgba(255,255,255,.8) 2px 2px 6px; 
+  margin-top: 1em;
+}
+
+.line {
+  height: .1em;
+  width: 85%;
+  background-color: black;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.4em;
+  margin-bottom: 2em;
+}
+
+.fa {
+  margin-right: 30px;
+}
+
+.jumbotron a {
+  color: #324d48;
+  /*#4e7970*/
+}
+
+.jumbotron a:hover {
+  color: #1e2e2b;
+  /*#7ea795*/
+}
+
+@media screen and (max-width:1000px) {
+  .jumbotron {
+    height: 50em;
+    background-position: 100%;
+  }
+
+  .jumbotron h1 {
+    margin-top: .5em;
+    font-size: 5em;
+  }
+  .jumbotron p {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .jumbotron h1 {
+    font-size: 4.5em;
+  }
+  .jumbotron p {
+    font-size: 1.8em;
+  }
+}
+
+
+/*about*/
+.about {
+  background-image: url("../images/aboutbg.jpg");
+  height: auto;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
+}
+
+.about-parent {
+  width: 85%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutpic {
+  width: 20em;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 4em;
+}
+
+.bio {
+  width: 25em;
+  margin-top: 2em;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 2px #000
+}
+
+.bio span {
+  font-size: 3em;
+}
+
+@media screen and (max-width:1000px) {
+  .about-parent {
+    flex-direction: column;
+  }
+
+  .aboutpic {
+    width: auto;
+    height: 17em;
+    border-radius: 50%;
+    margin-right: 0em;
+  }
+
+  .bio {
+    width: 20em;
+    margin-top: 2em;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px #000
+  }
+
+  .bio span {
+    font-size: 2.5em;
+  }
+}
+
+/*portfolio*/
+.portfolio {
+  padding-top: 2.5em;
+  padding-bottom: 3.5em;
+  background-color: #111;
+  background-size: cover;
+  height: auto;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.item {
+  width: 45em;
+  margin: 1em 1em;
+}
+
+.portfolio h3 {
+  width: 100%;
+  height: auto;
+  margin: .4em 0;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.portfolio img {
+  width: 100%;
+  height: auto;
+  border: white .2em solid;
+  border-radius: 2px;
+}
+
+@media screen and (max-width:1000px) {
+  .portfolio {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+  }
+}
+
+/*separator*/
+.sep {
+  height: 15em;
+  background-color: #fff;
+  position: relative;
+}
+
+.sep .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sep h1 {  
+  color: black;
+  font-size: 46px;
+  margin: 0;
+  text-align: center;
+}
+
+.buttons {
+  padding-top: .5em;
+}
+
+.sep a {
+  margin-left: 1.2em;
+}
+
+/*if screen is smaller than 1000 px*/
+@media screen and (max-width:1000px) {
+  .sep {
+    height: 25em;
+    display: flex;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .sep a {
+    margin-left: 0em;
+    margin-top: .5em;
+  }
+
+}
+
+/*contact*/
+.contactinfo {
+  color: white;  
+}
+
+.contactinfo h1 {
+  font-size: 42px;
+}
+
+.contactinfo p {
+  font-size: 18px;
+}
+
+.contact {
+  background-image: url("https://images.unsplash.com/uploads/1410882713416f40ea76b/51461029?crop=entropy&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1550");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 40em;
+  position: relative;
+}
+
+.contact .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact label {
+  color: #eee;
+  text-shadow: black 1px 1px 2px
+}
+
+@media screen and (max-width:800px) {
+  .contact {
+    height: 45em;
+  }
+}
+
+/*footer*/
+.footer {
+  height: 2.2em;
+}
+
+.footer p {
+  margin-top: .6em;
+  color: white;
+  font-weight: 100;
+}
