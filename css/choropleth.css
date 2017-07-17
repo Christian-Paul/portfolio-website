@@ -6,8 +6,8 @@ html, body {
 body {
   display: flex;
   justify-content: center;
-  font-family: 'Arial';
-  background-color: #fafafa;
+  font-family: 'Roboto';
+  background-color: #fff;
 }
 
 #main {
@@ -23,7 +23,7 @@ body {
 }
 
 .county {
-  stroke: #212121;
+  stroke: rgba(158, 158, 158, 0.8);
   stroke-width: 0.25;
 }
 
@@ -35,17 +35,24 @@ body {
 
 div.tooltip {
   position: absolute;
-  padding: 10px;                
-  font: 12px Arial;        
+  padding: 10px;
+  width: 12rem;
   background: #fff;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.2);
-  border: 0px;        
-  border-radius: 2px;            
-  pointer-events: none;            
+  border: 0px; 
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.tip-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
 }
 
 #title {
   font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 #description {
@@ -54,7 +61,7 @@ div.tooltip {
 
 #source {
   align-self: flex-end;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 a {

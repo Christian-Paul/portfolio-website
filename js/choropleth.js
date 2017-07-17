@@ -12,9 +12,6 @@ var tooltip = body.append("div")
   .attr("id", "tooltip")
   .style("opacity", 0);
 
-
-var unemployment = d3.map();
-
 var path = d3.geoPath();
 
 var x = d3.scaleLinear()
@@ -110,10 +107,18 @@ function ready(error, us, education) {
             return (
                     '<strong>' + result[0]['area_name'] + '</strong>' +
                     '<hr>' +
-                    'Bachelors or higher: ' + result[0].bachelorsOrHigher + '%<br>' +
-                    'Some college: ' + result[0].bachelorsOrHigher + '%<br>' +
-                    'High School Diploma: ' + result[0].bachelorsOrHigher + '%<br>' +
-                    'Less than High School: ' + result[0].bachelorsOrHigher + '%<br>'
+                    '<div class="tip-row">' +
+                      '<div>Bachelors or higher:</div>' + result[0].bachelorsOrHigher + '%<br>' +
+                    '</div>' +
+                    '<div class="tip-row">' +
+                      '<div>Some college:</div>' + result[0].someCollege + '%<br>' +
+                    '</div>' +
+                    '<div class="tip-row">' +
+                      '<div>High School Diploma:</div>' + result[0].onlyHighSchool + '%<br>' +
+                    '</div>' +
+                    '<div class="tip-row">' +
+                      '<div>Less than High School:</div>' + result[0].lessThanHighSchool + '%<br>' +
+                    '</div>'
                   )
           }
           //could not find a matching fips id in the data
