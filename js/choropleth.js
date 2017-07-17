@@ -5,6 +5,14 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
+var path = d3.geoPath()
+    .projection(null);
+
+var zoom = d3.zoom()
+    .scaleExtent([1, 8])
+    .on('zoom', zoomed);
+
+svg.call(zoom);
 
 // Define the div for the tooltip
 var tooltip = body.append("div")
@@ -12,7 +20,6 @@ var tooltip = body.append("div")
   .attr("id", "tooltip")
   .style("opacity", 0);
 
-var path = d3.geoPath();
 
 var x = d3.scaleLinear()
     .domain([2.6, 75.1])
@@ -22,38 +29,22 @@ var color = d3.scaleThreshold()
     .domain(d3.range(2.6, 75.1, (75.1-2.6)/8))
     .range(d3.schemeGreens[9]);
 
-var g = svg.append("g")
-    .attr("class", "key")
-    .attr("id", "legend")
-    .attr("transform", "translate(0,40)");
+var choropleth = svg.append('g')
+  .attr("transform", "translate(100, 0)")
 
-g.selectAll("rect")
-  .data(color.range().map(function(d) {
-      d = color.invertExtent(d);
-      if (d[0] == null) d[0] = x.domain()[0];
-      if (d[1] == null) d[1] = x.domain()[1];
-      return d;
-    }))
-  .enter().append("rect")
-    .attr("height", 8)
-    .attr("x", function(d) { return x(d[0]); })
-    .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-    .attr("fill", function(d) { return color(d[0]); });
+var features = choropleth.append('g');
 
-g.append("text")
-    .attr("class", "caption")
-    .attr("x", x.range()[0])
-    .attr("y", -6)
-    .attr("fill", "#000")
-    .attr("text-anchor", "start")
-    .attr("font-weight", "bold")
+// define presets for state and county stroke widths
+var defaultStateBorder = 1;
+var defaultCountyBorder = 0.25;
 
-g.call(d3.axisBottom(x)
-    .tickSize(13)
-    .tickFormat(function(x) { return Math.round(x) + '%' })
-    .tickValues(color.domain()))
-    .select(".domain")
-    .remove();
+var stateBorderScale = d3.scaleLinear()
+  .domain([1, 8])
+  .range([defaultStateBorder, defaultStateBorder/4]);
+
+var countyBorderScale = d3.scaleLinear()
+  .domain([1, 8])
+  .range([defaultCountyBorder, defaultCountyBorder/4]);
 
 const EDUCATION_FILE = 'https://raw.githubusercontent.com/Christian-Paul/portfolio-website/master/education.json';
 const COUNTY_FILE = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/counties.json';
@@ -66,7 +57,8 @@ d3.queue()
 function ready(error, us, education) {
   if (error) throw error;
 
-  svg.append("g")
+  features
+      .append('g')
       .attr("class", "counties")
       .selectAll("path")
       .data(topojson.feature(us, us.objects.counties).features)
@@ -96,6 +88,7 @@ function ready(error, us, education) {
         //could not find a matching fips id in the data
         return color(0)
        })
+      .attr('stroke-width', defaultCountyBorder)
       .attr("d", path)
       .on("mouseover", function(d) {      
         tooltip.style("opacity", 1); 
@@ -105,7 +98,7 @@ function ready(error, us, education) {
           });
           if(result[0]) {
             return (
-                    '<strong>' + result[0]['area_name'] + '</strong>' +
+                    '<strong>' + result[0]['area_name'] + ', ' + result[0]['state'] + '</strong>' +
                     '<hr>' +
                     '<div class="tip-row">' +
                       '<div>Bachelors or higher:</div>' + result[0].bachelorsOrHigher + '%<br>' +
@@ -143,8 +136,46 @@ function ready(error, us, education) {
         tooltip.style("opacity", 0); 
       });
 
-  svg.append("path")
+  features.append("path")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
       .attr("class", "states")
+      .attr('stroke-width', defaultStateBorder)
       .attr("d", path);
+
+  choropleth.append('rect')
+    .attr('height', 40)
+    .attr('width', 300)
+    .attr("transform", "translate(570, 30)")
+    .attr('fill', '#fff')
+
+  var legend = choropleth.append("g")
+      .attr("class", "key")
+      .attr("id", "legend")
+      .attr("transform", "translate(0,40)")
+
+  legend.selectAll("rect")
+    .data(color.range().map(function(d) {
+        d = color.invertExtent(d);
+        if (d[0] == null) d[0] = x.domain()[0];
+        if (d[1] == null) d[1] = x.domain()[1];
+        return d;
+      }))
+    .enter().append("rect")
+      .attr("height", 8)
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("fill", function(d) { return color(d[0]); });
+
+  legend.call(d3.axisBottom(x)
+      .tickSize(13)
+      .tickFormat(function(x) { return Math.round(x) + '%' })
+      .tickValues(color.domain()))
+      .select(".domain")
+      .remove();
 }
+
+function zoomed() {
+  features.attr('transform', d3.event.transform);
+  features.select('.states').style('stroke-width', stateBorderScale(d3.event.transform.k) + 'px');
+  features.selectAll('.county').style('stroke-width', countyBorderScale(d3.event.transform.k) + 'px');
+};

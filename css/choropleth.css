@@ -24,7 +24,6 @@ body {
 
 .county {
   stroke: rgba(158, 158, 158, 0.8);
-  stroke-width: 0.25;
 }
 
 .states {
@@ -57,11 +56,12 @@ div.tooltip {
 
 #description {
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 #source {
   align-self: flex-end;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 a {
