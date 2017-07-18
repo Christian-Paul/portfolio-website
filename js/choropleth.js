@@ -1,15 +1,30 @@
 // Define body
 var body = d3.select("body");
+var main = d3.select('#main');
 
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+var width = 1160;
+var height = 600;
+
+var svg = main
+  .append('svg')
+  .attr('width', width)
+  .attr('height', height);
+
+main
+  .append('div')
+  .attr('id', 'source')
+  .html(function() {
+      return (
+        "Source: <a href='https://www.ers.usda.gov/data-products/county-level-data-sets/'>USDA Economic Research Service</a>"
+      )
+  })
 
 var path = d3.geoPath()
     .projection(null);
 
 var zoom = d3.zoom()
     .scaleExtent([1, 8])
+    .translateExtent([[0, 0], [width, height]])
     .on('zoom', zoomed);
 
 svg.call(zoom);
@@ -20,13 +35,16 @@ var tooltip = body.append("div")
   .attr("id", "tooltip")
   .style("opacity", 0);
 
+var min = 1;
+var max = 60;
+var step = (max - min) / 9;
 
 var x = d3.scaleLinear()
-    .domain([2.6, 75.1])
+    .domain([min, max])
     .rangeRound([600, 860]);
 
 var color = d3.scaleThreshold()
-    .domain(d3.range(2.6, 75.1, (75.1-2.6)/8))
+    .domain(d3.range(min + step, max, step))
     .range(d3.schemeGreens[9]);
 
 var choropleth = svg.append('g')
@@ -145,13 +163,13 @@ function ready(error, us, education) {
   choropleth.append('rect')
     .attr('height', 40)
     .attr('width', 300)
-    .attr("transform", "translate(570, 30)")
+    .attr("transform", "translate(580, 30)")
     .attr('fill', '#fff')
 
   var legend = choropleth.append("g")
       .attr("class", "key")
       .attr("id", "legend")
-      .attr("transform", "translate(0,40)")
+      .attr("transform", "translate(0, 40)")
 
   legend.selectAll("rect")
     .data(color.range().map(function(d) {
