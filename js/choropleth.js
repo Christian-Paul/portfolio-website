@@ -263,7 +263,8 @@ function zoomed() {
 
 function zoomEnd() {
   // after panning is completed, tooltip is made visible
-  if(d3.event.sourceEvent !== null) {
+  // don't make it visible if mouse is outside of a county, of if it's the initial zoom
+  if(d3.event.sourceEvent !== null && d3.event.sourceEvent.toElement.tagName === 'path') {
     tooltip.style('opacity', 1);
   }
 };
