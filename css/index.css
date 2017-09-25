@@ -194,14 +194,13 @@ html, body {
   .portfolio-holder .portfolio .portfolio-row .project-holder {
     width: 42vw;
     padding-top: 4.5em; } }
-        .portfolio-holder .portfolio .portfolio-row .project-holder .glenn-sunni-preview {
-          background-image: url("../images/glennsunni-preview.png"); }
-        .portfolio-holder .portfolio .portfolio-row .project-holder .gdp-preview {
-          background-image: url("../images/choropleth-preview.png"); }
-        .portfolio-holder .portfolio .portfolio-row .project-holder .stock-preview {
-          background-image: url("../images/stock-preview.png"); }
-        .portfolio-holder .portfolio .portfolio-row .project-holder .pollify-preview {
-          background-image: url("../images/pollify-preview.png"); }
+        .portfolio-holder .portfolio .portfolio-row .project-holder .project-img {
+          height: 45vw;
+          width: 90vw; }
+@media(min-width: 700px) {
+  .portfolio-holder .portfolio .portfolio-row .project-holder .project-img {
+    height: 21vw;
+    width: 42vw; } }
         .portfolio-holder .portfolio .portfolio-row .project-holder .project-preview {
           background-position: top center;
           background-size: cover;
