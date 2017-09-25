@@ -42,7 +42,7 @@ html, body {
   .intro-holder .nav-holder .nav a {
     font-size: 1.2em; } }
       .intro-holder .nav-holder .nav a:hover {
-        color: #ddd; }
+        color: orange; }
       .intro-holder .nav-holder .nav .logo-holder, .intro-holder .nav-holder .nav .destinations-holder, .intro-holder .nav-holder .nav .destination, .intro-holder .nav-holder .nav a {
         height: 100%;
         display: flex;
@@ -198,12 +198,8 @@ html, body {
           background-image: url("../images/glennsunni-preview.png"); }
         .portfolio-holder .portfolio .portfolio-row .project-holder .gdp-preview {
           background-image: url("../images/choropleth-preview.png"); }
-        .portfolio-holder .portfolio .portfolio-row .project-holder .weather-preview {
-          background-image: url("../images/weather-preview.png"); }
         .portfolio-holder .portfolio .portfolio-row .project-holder .stock-preview {
           background-image: url("../images/stock-preview.png"); }
-        .portfolio-holder .portfolio .portfolio-row .project-holder .search-preview {
-          background-image: url("../images/search-preview.png"); }
         .portfolio-holder .portfolio .portfolio-row .project-holder .pollify-preview {
           background-image: url("../images/pollify-preview.png"); }
         .portfolio-holder .portfolio .portfolio-row .project-holder .project-preview {
@@ -249,7 +245,7 @@ html, body {
     height: 2.5em;
     width: 2.5em; } }
           .portfolio-holder .portfolio .portfolio-row .links-holder .links .codepen-svg:hover, .portfolio-holder .portfolio .portfolio-row .links-holder .links .github-svg:hover, .portfolio-holder .portfolio .portfolio-row .links-holder .links .link-svg:hover {
-            fill: firebrick; }
+            fill: orange; }
           .portfolio-holder .portfolio .portfolio-row .links-holder .links .grayed-out {
             fill: #333 !important;
             cursor: default; }
@@ -360,6 +356,6 @@ html, body {
         color: #aaa;
         cursor: pointer; }
       .footer-holder .footer .footer-nav .footer-dest a:hover {
-        color: lightblue; }
+        color: orange; }
 
 /*# sourceMappingURL=index.css.map */
